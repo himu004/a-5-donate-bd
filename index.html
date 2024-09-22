@@ -25,7 +25,7 @@
                 extend: {
                     colors: {
                         buttonColor: '#B4F461',
-                        navBg: '#a3b18a71',
+                        navBg: '#dad7cd',
                         navBorder: '#a3b18a76',
                     },
                     fontFamily: {
@@ -37,9 +37,9 @@
     </script>
 </head>
 
-<body>
-    <header>
-        <nav class="bg-navBg fixed w-full z-20 top-0 start-0 border-b border-navBorder">
+<body class="font-Lexand">
+    <header class="max-w-screen-xl mx-auto">
+        <nav class="bg-navBg fixed w-full z-20 top-0 start-0 border-b border-navBorder bg-opacity-85">
             <div class="max-w-screen-xl md:flex flex-wrap items-center justify-between mx-auto p-4">
                 <button class="btn btn-outline btn-success hidden">
                     <a href="/blog.html" class="flex items-center px-3 text-xl">
@@ -71,12 +71,70 @@
                 </div>
             </div>
         </nav>
-
+        <!-- Buttons And Total Donation -->
+        <div class="mt-36 mb-10 flex justify-center gap-4">   
+                <button class="btn bg-buttonColor px-8 text-xl">Donation</button>
+                <button class="btn btn-outline px-8 text-xl">History</button>
+        </div>
     </header>
+    
+    <main class="max-w-screen-xl mx-auto">
+        <!-- Donation Card 1 -->
+         <div class="md:flex gap-5 border border-gray-200 rounded-xl p-5">
+            <img src="assets/noakhali.png" alt="">
+            <div class="space-y-8">
+                <button class="btn">
+                    <img src="assets/coin.png" alt="">
+                    <span>1000</span>
+                    BDT
+                </button>
+                <h2 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                <p class="text-gray-500">
+                    The recent floods in Noakhali have caused significant damage to homes infrastructure. Your donation will help provide essential supplies and to those affected by this disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                </p>
+                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                <button class="w-full btn bg-buttonColor">Donate Now</button>
+            </div>
+         </div>
+        <!-- Donation Card 2 -->
+         <div class="md:flex gap-5 border border-gray-200 rounded-xl p-5">
+            <img src="assets/feni.png" alt="">
+            <div class="space-y-8">
+                <button class="btn">
+                    <img src="assets/coin.png" alt="">
+                    <span>600</span>
+                    BDT
+                </button>
+                <h2 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                <p class="text-gray-500">
+                    The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                </p>
+                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                <button class="w-full btn bg-buttonColor">Donate Now</button>
+            </div>
+         </div>
+        <!-- Donation Card 3 -->
+         <div class="md:flex gap-5 border border-gray-200 rounded-xl p-5">
+            <img src="assets/quota-protest.png" alt="">
+            <div class="space-y-8">
+                <button class="btn">
+                    <img src="assets/coin.png" alt="">
+                    <span>2400</span>
+                    BDT
+                </button>
+                <h2 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h2>
+                <p class="text-gray-500">
+                    The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                </p>
+                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                <button class="w-full btn bg-buttonColor">Donate Now</button>
+            </div>
+         </div>
+    </main>
 
+    <footer class="bg-[#F9F7F3] h-[80px] mt-12" >
 
-
-
+    </footer>
 
 
     <!-- Scripts -->
