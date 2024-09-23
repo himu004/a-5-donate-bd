@@ -40,7 +40,7 @@
 
 <body class="font-Lexand">
     <header class="max-w-screen-xl mx-auto">
-        <nav class="bg-navBg fixed w-full z-20 top-0 start-0 border-b border-navBorder bg-opacity-85">
+        <nav class="backdrop-blur-lg  fixed w-full z-20 top-0 start-0 border-b border-navBorder bg-opacity-85">
             <div class="max-w-screen-xl md:flex flex-wrap items-center justify-between mx-auto p-4">
                 <button class="btn btn-outline btn-success hidden">
                     <a href="/blog.html" class="flex items-center px-3 text-xl">
@@ -72,15 +72,24 @@
                     </button>
                 </div>
             </div>
+            <div>
+                <div class="py-5 flex justify-center gap-4">
+                    <button class="btn bg-buttonColor px-8 text-xl">Donation</button>
+                    <button class="btn btn-outline px-8 text-xl">History</button>
+                </div>
+            </div>
         </nav>
         <!-- Buttons And Total Donation -->
-        <div class="mt-36 mb-10 flex justify-center gap-4">
-            <button class="btn bg-buttonColor px-8 text-xl">Donation</button>
-            <button class="btn btn-outline px-8 text-xl">History</button>
-        </div>
+         <div class="fixed w-full z-20 top-0 start-0">
+            <!-- <div class="md:mt-24 mt-32 backdrop-blur-lg py-5 flex justify-center gap-4">
+                <button class="btn bg-buttonColor px-8 text-xl">Donation</button>
+                <button class="btn btn-outline px-8 text-xl">History</button>
+            </div> -->
+         </div>
+        
     </header>
 
-    <main class="max-w-screen-xl mx-auto">
+    <main class="max-w-screen-xl mx-auto mt-56">
         <!-- Donation Section -->
         <section class=" space-y-8">
             <!-- Donation Card 1 -->
@@ -89,7 +98,7 @@
                 <div class="space-y-8">
                     <button class="btn md:mt-0 mt-4">
                         <img src="assets/coin.png" alt="">
-                        <span>0</span>
+                        <span id="card-1-donation">0</span>
                         BDT
                     </button>
                     <h2 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -99,8 +108,8 @@
                         contribution, big or small, makes difference. Please join us in supporting the relief efforts
                         and making a positive impact on the lives of those in need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="w-full btn bg-buttonColor">Donate Now</button>
+                    <input id="input-1" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button id="btn-1" class="w-full btn bg-buttonColor">Donate Now</button>
                 </div>
             </div>
             <!-- Donation Card 2 -->
@@ -120,8 +129,8 @@
                         help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a
                         real difference. Please consider donating today to assist those in urgent need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="w-full btn bg-buttonColor">Donate Now</button>
+                    <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button id="btn-2" class="w-full btn bg-buttonColor">Donate Now</button>
                 </div>
             </div>
             <!-- Donation Card 3 -->
@@ -142,11 +151,27 @@
                         vital role in alleviating their suffering and aiding in their recovery. Please consider making a
                         donation to support these brave individuals in their time of need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="w-full btn bg-buttonColor">Donate Now</button>
+                    <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                    <button id="btn-3" class="w-full btn bg-buttonColor">Donate Now</button>
                 </div>
             </div>
+            <!-- Modal -->
+            <!-- Open the modal using ID.showModal() method -->
 
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+            <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
         </section>
         <!-- History Section -->
          <section>
